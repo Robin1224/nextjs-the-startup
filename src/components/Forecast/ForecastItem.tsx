@@ -1,6 +1,8 @@
 import Image from "next/image";
 
-interface Props {}
+interface Props {
+  data: any;
+}
 const ForecastItem = (props: Props) => {
   return (
     <>

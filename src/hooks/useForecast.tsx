@@ -1,4 +1,4 @@
-//Gets the upcoming weather forecast for the specified amount of days (max 7) in CELCIUS
+// Gets the upcoming weather forecast for the specified amount of days (max 7) in CELCIUS
 // Path: src/hooks/useForecast.tsx
 
 interface Params {
@@ -6,11 +6,6 @@ interface Params {
 }
 const useForecast = async (params: Params) => {
   const res = await fetch('https://dtnl-frontend-case.vercel.app/api/get-forecast', { next: { tags: ['weatherData'] } }).then((response) => response.json())
-
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch data')
-  };
 
   res.forecast.forEach((entry: any) => {
     if (entry.metric === 'FAHRENHEIT') {
@@ -20,11 +15,11 @@ const useForecast = async (params: Params) => {
     };
   });
 
-  res.forecast.slice(0, params.days);
+  const finalRes = res.forecast.slice(0, params.days);
 
-  console.log(res.forecast);
+  // console.log(finalRes[0]);
 
-  return res.forecast;
+  return finalRes;
 };
 
 export default useForecast
