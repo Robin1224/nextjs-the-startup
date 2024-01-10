@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={lato.variable}>
-      <body className="font-lato">{children}</body>
+    <html lang="en" className={lato.className}>
+      <body>{children}</body>
     </html>
   );
 }

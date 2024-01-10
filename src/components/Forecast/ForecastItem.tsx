@@ -13,7 +13,7 @@ const ForecastItem = (props: Props) => {
           height={24}
           priority
         />
-          <span>19° /</span>
+          <span className="ml-1">19° /</span>
           <span>{" "}22°</span>
           <Image
           src="/weather_icons/precipitation.svg"
