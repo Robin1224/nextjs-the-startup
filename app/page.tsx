@@ -1,6 +1,7 @@
 import Header from "../src/components/Header";
 import HeaderContent from "../src/components/HeaderContent";
 import Forecast from "../src/components/Forecast/Forecast";
+import Activities from "../src/components/Activities/Activities";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
         <HeaderContent />
       </Header>
       <Forecast />
-    
+      <Activities />
     </>
   );
 }

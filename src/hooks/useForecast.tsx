@@ -9,17 +9,20 @@ const useForecast = async (params: Params) => {
 
   res.forecast.forEach((entry: any) => {
     if (entry.metric === 'FAHRENHEIT') {
-      entry.minTemp = (entry.minTemp - 32) * 5/9;
-      entry.maxTemp = (entry.maxTemp - 32) * 5/9;
+      entry.minTemp = Math.round((entry.minTemp - 32) * 5/9);
+      entry.maxTemp = Math.round((entry.maxTemp - 32) * 5/9);
       entry.metric = 'CELCIUS';
     };
+
+    if (entry.windDirection.length > 1) {
+      entry.windDirection = entry.windDirection.slice(0, 1) + "/" + entry.windDirection.slice(1);
+    }
+    
   });
 
-  const finalRes = res.forecast.slice(0, params.days);
+  const sanitizedRes = res.forecast.slice(0, params.days);
 
-  // console.log(finalRes[0]);
-
-  return finalRes;
+  return sanitizedRes;
 };
 
 export default useForecast
