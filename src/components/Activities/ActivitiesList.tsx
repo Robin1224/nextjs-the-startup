@@ -1,5 +1,4 @@
 import useActivities from "@/src/hooks/useActivities";
-import Image from "next/image";
 import ActivityItem from "./ActivityItem";
 
 interface Props {

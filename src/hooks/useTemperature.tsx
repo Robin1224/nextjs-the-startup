@@ -2,7 +2,7 @@
 // Path: src/hooks/useTemperature.tsx
 
 const useTemperature = async () => {
-  const res = await fetch('https://dtnl-frontend-case.vercel.app/api/get-weather', { cache: 'no-store', next: { tags: ['weatherData'] } }).then((response) => response.json())
+  const res = await fetch('https://dtnl-frontend-case.vercel.app/api/get-weather', { cache: 'no-store'}).then((response) => response.json())
   const sanitizedRes = {temp: 0, title_1: '', title_2: '', description: ''};
   const keyword = '{{ CELCIUS }}';
 
@@ -26,7 +26,6 @@ const useTemperature = async () => {
       sanitizedRes.title_1 = entry.title.substring(0, wordIndex);
       sanitizedRes.title_2 = entry.title.substring(wordIndex + keyword.length);
       sanitizedRes.description = entry.description;
-      console.log(sanitizedRes);
     }
   });
 

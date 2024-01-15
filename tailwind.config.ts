@@ -7,6 +7,16 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      'sm': '500px',
+      // => @media (min-width: 500px) { ... }
+
+      'md': '750px',
+      // => @media (min-width: 750px) { ... }
+
+      'lg': '1440px',
+      // => @media (min-width: 1440px) { ... }
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',

@@ -30,7 +30,7 @@ const ForecastItem = (props: Props) => {
   return (
     <>
       <span className="font-normal">{`${weekday} ${day} ${month}`}</span>
-      <div className="flex pr-8 mb-4 mt-1">
+      <div className="flex pr-8 mb-4 mt-1 place-content-between max-w-lg">
         <Image
           src="/weather_icons/sun.svg"
           alt="Sun"
@@ -39,8 +39,8 @@ const ForecastItem = (props: Props) => {
           priority
         />
         <div className="w-20">
-        <span className="ml-1 font-light">{`${props.data.minTemp}° /`}</span>
-        <span className="ml-2">{` ${props.data.maxTemp}°`}</span>
+          <span className="ml-1 font-light">{`${props.data.minTemp}° /`}</span>
+          <span className="ml-2">{` ${props.data.maxTemp}°`}</span>
         </div>
         <Image
           src="/weather_icons/precipitation.svg"
