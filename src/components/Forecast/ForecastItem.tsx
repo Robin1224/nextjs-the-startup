@@ -28,7 +28,7 @@ const ForecastItem = (props: Props) => {
   }
 
   return (
-    <>
+    <div className="flex flex-col lg:col-start-2 lg:col-span-9">
       <span className="font-normal">{`${weekday} ${day} ${month}`}</span>
       <div className="flex pr-8 mb-4 mt-1 place-content-between max-w-lg">
         <Image
@@ -61,7 +61,7 @@ const ForecastItem = (props: Props) => {
           priority
         />
       </div>
-    </>
+    </div>
   );
 };
 export default ForecastItem;

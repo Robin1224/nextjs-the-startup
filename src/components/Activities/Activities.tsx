@@ -7,7 +7,7 @@ const Activities = async (props: Props) => {
   const tempData = await useTemperature();
 
   return (
-    <main className="p-5 md:col-start-2 md:col-span-1 md:row-start-1 md:row-span-1">
+    <main className="p-5 md:col-start-2 md:col-span-1 md:row-start-1 md:row-span-1 lg:grid lg:grid-cols-subgrid lg:gap-3 lg:col-start-13 lg:col-span-12 lg:row-start-1 lg:row-span-2 lg:px-0">
       <CurrentTemp temperature={tempData} />
       <section className="flex flex-col">
         <span className="text-2xl mt-8 block">Some things you could do:</span>

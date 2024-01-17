@@ -14,8 +14,8 @@ const config: Config = {
       'md': '750px',
       // => @media (min-width: 750px) { ... }
 
-      'lg': '1440px',
-      // => @media (min-width: 1440px) { ... }
+      'lg': '900px',
+      // => @media (min-width: 900px) { ... }
     },
     colors: {
       transparent: 'transparent',
@@ -34,14 +34,12 @@ const config: Config = {
       'purple': '#5115f7',
     },
     containers: {
-      'md': '28.75rem',
+      'md': '36rem',
     },
     extend: {
       gridTemplateColumns: {
-        'desktop': '1fr repeat(24, 50px) 1fr',
-      },
-      gridTemplateRows: {
-        'md': 'auto auto auto',
+        '24': 'repeat(24, minmax(0, 1fr))',
+        'subgrid': 'subgrid',
       },
       gap: {
         'desktop': '0.625vw',
@@ -53,6 +51,16 @@ const config: Config = {
       },
       fontFamily: {
         lato: ['var(--font-lato)'],
+      },
+      gridColumnStart: {
+        '13': '13',
+        '14': '14',
+        '15': '15',
+        '16': '16',
+        '17': '17',
+      },
+      gridColumn: {
+        'span-24': 'span 24 / span 24',
       },
     },
   },
