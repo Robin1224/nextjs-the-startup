@@ -32,9 +32,15 @@ const config: Config = {
       'rose': '#f0ebfe',
       'purple': '#5115f7',
     },
+    containers: {
+      'md': '28.75rem',
+    },
     extend: {
       gridTemplateColumns: {
         'desktop': '12.5vw repeat(24, 1fr) 12.5vw',
+      },
+      gridTemplateRows: {
+        'md': 'auto auto auto',
       },
       gap: {
         'desktop': '0.625vw',
@@ -49,6 +55,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/container-queries'),
+  ],
 }
 export default config

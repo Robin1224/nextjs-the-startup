@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* #activitiesContainer::-webkit-scrollbar {
+  display: none;
+}
+
+#activitiesContainer {
+  scrollbar-width: none;
+} */

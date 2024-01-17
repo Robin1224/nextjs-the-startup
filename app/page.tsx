@@ -7,10 +7,12 @@ import Footer from "../src/components/Footer";
 export default function Home() {
   return (
     <>
-      <Header>
-        <HeaderContent />
-      </Header>
-      <Forecast />
+      <div className="flex flex-col md:h-full">
+        <Header>
+          <HeaderContent />
+        </Header>
+        <Forecast />
+      </div>
       <Activities />
       <Footer />
     </>
