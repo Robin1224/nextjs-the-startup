@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={lato.className}>
-      <body className="md:grid md:grid-cols-2 md:auto-rows-min">{children}</body>
+      <body className="w-screen md:grid md:grid-cols-2 md:auto-rows-min">{children}</body>
     </html>
   );
 }
