@@ -37,7 +37,7 @@ const config: Config = {
     },
     extend: {
       gridTemplateColumns: {
-        'desktop': '12.5vw repeat(24, 1fr) 12.5vw',
+        'desktop': '1fr repeat(24, 50px) 1fr',
       },
       gridTemplateRows: {
         'md': 'auto auto auto',
