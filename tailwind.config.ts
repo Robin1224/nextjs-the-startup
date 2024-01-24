@@ -34,7 +34,10 @@ const config: Config = {
       'purple': '#5115f7',
     },
     containers: {
+      'temp': '28rem',
+      'main-full': '45.375rem',
       'md': '28.75rem',
+      'lg': '39rem',
     },
     extend: {
       gridTemplateColumns: {
@@ -50,6 +53,9 @@ const config: Config = {
         'header-h1-top': '4.375rem',
         'header-text-top': '1.625rem',
         'header-whiteline': '2.8755rem',
+        // 'col': '',
+        // 'col-half': '',
+        // 'col-full': '20vw',
       },
       fontFamily: {
         lato: ['var(--font-lato)'],
