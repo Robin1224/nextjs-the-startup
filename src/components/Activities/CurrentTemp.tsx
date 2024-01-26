@@ -11,7 +11,7 @@ const CurrentTemp = (props: Props) => {
           {props.temperature.temp}
           {props.temperature.title_2}
         </h2>
-        <p className="font-thin leading-7 mt-4 @temp/main:mt-1">
+        <p className="font-light leading-7 mt-4 @temp/main:mt-1">
           {props.temperature.description}
         </p>
       </div>
